@@ -1,0 +1,76 @@
+@import "compass/css3";
+
+.switch {
+    $width: 110px;
+    $height: $width * 0.44;
+    $switch-radius: $height * 0.5;
+    $knob-size: $height - 6px;
+    $knob-radius: $knob-size * 0.5;
+    $on-color: #f04317;
+    $off-color: #12df4f;
+    $knob-color: white;
+
+    position: relative;
+
+    width: $width;
+    height: $height; 
+
+    line-height: $height;
+
+    font-family: 'Arimo', sans-serif;
+    font-weight: 400; 
+    color: white;
+
+    background-color: $off-color;
+    
+    cursor: pointer;
+
+    @include border-radius($switch-radius);
+    
+    span {
+        position: relative;
+        display: inline-block;
+    }
+
+    .onLabel,
+    .offLabel {
+        width: 50%;
+        @include transition(opacity .1s linear .1s);
+    }
+
+    .onLabel {
+        text-align: left;
+        left: $switch-radius;
+        @include opacity(0);
+    }
+
+    .offLabel {
+        text-align: right;
+        right: $switch-radius;
+        @include opacity(1);
+    }
+
+    .knob {
+        position: absolute;
+        top: ($height - $knob-size) / 2;
+        left: ($height - $knob-size) / 2;
+        width: $knob-size;
+        height: $knob-size;
+        background-color: $knob-color;
+        @include border-radius($knob-radius);
+        @include transition(left .3s ease-in-out);
+    }
+
+    &.on {
+        background-color: $on-color;
+        .onLabel {
+            @include opacity(1);
+        }
+        .offLabel {
+            @include opacity(0);
+        }
+        .knob {
+            left: $width - ($height - $knob-size) / 2 - $knob-size;
+        }
+    }
+}

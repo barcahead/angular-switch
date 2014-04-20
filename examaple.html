@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app="demo" ng-controller="ctrl">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo</title>
+  <link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+  <script src="switch.js"></script>
+  <link rel="stylesheet" href="switch.css">
+  <script>
+    angular.module('demo', ['ui.switch'])
+    .controller('ctrl', function($scope) {
+      $scope.switchStatus = true;
+    });
+  </script>
+</head>
+<body>
+  <switch 
+    model="switchStatus"
+    on-label="EN"
+    off-label="中文">
+  </switch>
+</body>
+</html>

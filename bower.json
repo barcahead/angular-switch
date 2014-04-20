@@ -1,0 +1,19 @@
+{
+  "name": "angular-switch",
+  "version": "0.0.0",
+  "authors": [
+    "barcahead <fengyel@gmail.com>"
+  ],
+  "description": "angular toggle-switch directive",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.0"
+  }
+}

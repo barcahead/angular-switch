@@ -1,0 +1,82 @@
+/* line 3, switch.scss */
+.switch {
+  position: relative;
+  width: 110px;
+  height: 48.4px;
+  line-height: 48.4px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: 400;
+  color: white;
+  background-color: #12df4f;
+  cursor: pointer;
+  -webkit-border-radius: 24.2px;
+  -moz-border-radius: 24.2px;
+  -ms-border-radius: 24.2px;
+  -o-border-radius: 24.2px;
+  border-radius: 24.2px;
+}
+/* line 30, switch.scss */
+.switch span {
+  position: relative;
+  display: inline-block;
+}
+/* line 36, switch.scss */
+.switch .onLabel,
+.switch .offLabel {
+  width: 50%;
+  -webkit-transition: opacity 0.1s linear;
+  -webkit-transition-delay: 0.1s;
+  -moz-transition: opacity 0.1s linear 0.1s;
+  -o-transition: opacity 0.1s linear 0.1s;
+  transition: opacity 0.1s linear 0.1s;
+}
+/* line 41, switch.scss */
+.switch .onLabel {
+  text-align: left;
+  left: 24.2px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+/* line 47, switch.scss */
+.switch .offLabel {
+  text-align: right;
+  right: 24.2px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 53, switch.scss */
+.switch .knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 42.4px;
+  height: 42.4px;
+  background-color: white;
+  -webkit-border-radius: 21.2px;
+  -moz-border-radius: 21.2px;
+  -ms-border-radius: 21.2px;
+  -o-border-radius: 21.2px;
+  border-radius: 21.2px;
+  -webkit-transition: left 0.3s ease-in-out;
+  -moz-transition: left 0.3s ease-in-out;
+  -o-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
+}
+/* line 64, switch.scss */
+.switch.on {
+  background-color: #f04317;
+}
+/* line 66, switch.scss */
+.switch.on .onLabel {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 69, switch.scss */
+.switch.on .offLabel {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+/* line 72, switch.scss */
+.switch.on .knob {
+  left: 64.6px;
+}
