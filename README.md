@@ -6,7 +6,7 @@ Angular switch is based on [angular-toggle-switch](https://github.com/cgarvis/an
 ## Install
 
 ```shell
-bower install barcahead/anguler-switch --save
+bower install barcahead/angular-switch --save
 ```
 
 
